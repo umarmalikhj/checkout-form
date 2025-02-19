@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Checkout Form</title>
+</head>
+<body>
+<h1>Checkout Form</h1>
+<!-- Main section: Form and Cart side by side -->
+<div class="maindiv">
+    <!-- Outer div containing the form elements for Billing and Payment -->
+    <div class="outerdiv">
+        <form action="#" id="frm">
+            <!-- Billing Address Section -->
+            <div class="billing">
+                <!-- Left column for Billing Address -->
+                <div class="first-col-50">
+                    <h3>Billing Address</h3>
+                    <i class="fa-solid fa-user"></i>
+                    <label for="fname">Full Name</label>
+                    <br>
+                    <input type="text" id="fname" class="label" required>
+                    <br>
+                    <i class="fa-solid fa-envelope"></i>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="text" id="email" class="label" required>
+                    <br>
+                    <i class="fa-solid fa-address-card"></i>
+                    <label for="address">Address</label>
+                    <br>
+                    <input type="text" id="address" class="label" required>
+                    <br>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <label for="city">City</label>
+                    <br>
+                    <input type="text" id="city" class="label" required>
+                    <br>
+                    <!-- State and ZIP Code side by side -->
+                    <div class="stzip">
+                        <div class="main-state">
+                            <p><label for="state">State</label></p>
+                            <input type="text" id="state" class="zipst" required>
+                        </div>
+                        <div class="main-zip">
+                            <p><label for="zip">ZIP</label></p>
+                            <input type="number" id="zip" class="zipst" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column for Payment Information -->
+                <div class="second-col-50"> 
+                    <div class="payment">
+                        <h3>Payment</h3>
+                        <p>Accepted Cards</p>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-amex"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                        <br>
+                        <label for="ncard">Name On Card</label>
+                        <br>
+                        <input type="text" id="ncard" class="label" required>
+                        <br>
+                        <label for="ccno">Credit Card No</label>
+                        <br>
+                        <input type="number" id="ccno" class="label" required>
+                        <br>
+                        <label for="exp">Expiry Date</label>
+                        <br>
+                        <input type="date" id="exp" class="label" required>
+                        <br>
+                        <label for="cvv">CVV</label>
+                        <br>
+                        <input type="password" inputmode="numeric" required maxlength="3"  id="cvv" class="label" required>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- Checkbox to confirm if shipping is same as billing -->
+        <input type="checkbox" id="sameadd">
+        <label for="sameadd">Shipping Address Same As Billing</label>
+        <br><br>
+        <!-- Continue to Checkout Button -->
+        <button type="submit" id="subbtn">Continue to Checkout</button>
+    </div>
+    <!-- Cart Value Section (Right Side) -->
+    <div class="cartvalue">
+        <div class="cart-head">
+            <h4>Cart</h4>
+            <span><i class="fa-solid fa-cart-shopping"></i>4</span>
+        </div>
+         <!-- Cart Items -->
+        <div class="items">
+            <a href="#">Item 1</a>
+            <span>$105</span>
+        </div>
+        <div class="items">
+            <a href="#">Item 2</a>
+            <span>$95</span>
+        </div>
+        <div class="items">
+            <a href="#">Item 3</a>
+            <span>$100</span>
+        </div>
+        <div class="items">
+            <a href="#">Item 4</a>
+            <span>$50</span>
+        </div>
+        <hr>
+        <!-- Cart Total -->
+        <div class="total">
+            <span>Total</span>
+            <span>$350</span>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

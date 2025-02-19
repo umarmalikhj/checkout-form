@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+body h1{
+    margin: 1em 0 0.5em 0.75em;
+    font-size: 25px;
+}
+
+/* Main Layout: Flexbox container for the form and cart */
+.maindiv{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Outer div styling for the form (Billing & Payment) */
+.outerdiv{
+    border: 2px solid #d3d3d3;
+    background-color: #f2f2f2;
+    width: 75%;
+    height: 600px;
+    margin: 10px 1em 10px 1em;
+    padding: 5px 15px 10px 15px;
+}
+
+/* Form Styling */
+#frm{
+    display: flex;
+    flex-wrap: wrap;       
+    width: 100%;
+}
+
+/* Billing Section */
+.billing{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.billing h3{
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+/* Left Column for Billing Address */
+.first-col-50{
+    width: 50%;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+    /* State & ZIP Code */
+.stzip{
+    display: flex;
+    width: 100%;
+    gap: 0.75em;
+}
+
+.zipst{
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.main-state{
+    width: 50%;
+}
+
+.main-zip{
+    width: 50%;
+}
+
+/* Right Column for Payment Information */
+.second-col-50{
+    width: 50%;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+/* Individual Styling Because of default Placeholder */
+#exp{
+    height: 43px;
+}
+    /* Icons Of Payment Gateway */
+.fa-brands{
+    font-size: 30px;
+    margin: 0.25em 0 0.85em 0;
+}
+.fa-cc-visa{
+    color: #1A1F71;
+}
+
+.fa-cc-amex{
+    color: #016FD0;
+}
+
+.fa-cc-paypal{
+    color: #27346A;
+}
+
+/* Common Input Styling */
+.label{
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Button */
+#subbtn{
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* Styling for the Cart (Right Section) */
+.cartvalue{
+    border: 2px solid #d3d3d3;
+    background-color: #f2f2f2;
+    width: 25%;
+    height: 300px;
+    margin: 10px 1em 10px 1em;
+    padding: 15px 15px;
+}
+
+.fa-cart-shopping{
+    margin-right: 3px;
+}
+
+.cartvalue hr{
+    border: 1px solid lightgray;
+}
+
+/* Cart Header Styling */
+.cart-head{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.25em 0 1em 0;
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+}
+
+.items a{
+    color: #2196F3;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.25em 0 1em 0;
+}
+
+/* Responsive Design for Small Screens (Below 850px) */
+@media (max-width: 850px) {
+    .outerdiv{
+        width: calc(100% - 30px);
+        height: 100%;
+    }
+
+    .billing{
+        flex-direction: column;
+        width: calc(100% - 30px);
+    }
+
+    .maindiv{
+        flex-direction: column-reverse;
+    }
+
+    .cartvalue{
+        width: calc(100% - 30px);
+        margin-right: 2vh;
+        box-sizing: border-box;
+    }
+    
+    #frm{
+        justify-content: center;
+    }
+
+    .label{
+        width: 100%;
+    }
+
+    .first-col-50{
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .second-col-50{
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .stzip{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-state{
+        width: 100%;
+    }
+
+    .main-zip{
+        width: 100%;
+    }
+}
